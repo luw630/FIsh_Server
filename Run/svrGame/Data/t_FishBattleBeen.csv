@@ -1,0 +1,4 @@
+t_id,t_screenFishNum,t_generalLauncherTime,t_changeBossTime,t_bossLifeTime,t_changeLevelTime
+int32,int32,int32,int32,int32,int32
+配置id,屏幕中鱼的最大个数,每关普通产生鱼时间(秒),切换boss的停止产生鱼的时间(秒),boss出现的最长时间(秒),切换下关的时间(秒)
+1,30,180,10,60,5

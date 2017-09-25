@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e1b5af11-07d1-4377-bd6d-4b16bc459891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{5218f712-d143-4b20-bf7d-1c9d35f5602d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{4fffbdfb-a454-440e-82a3-4ed04eb7bf7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionClient">
+      <UniqueIdentifier>{f7985655-d517-4697-8dd1-5930e299ff7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionAccount">
+      <UniqueIdentifier>{dc3ae5f5-8da6-4a53-940f-3edb95cbfba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionGameSvr">
+      <UniqueIdentifier>{16f97275-df37-42e2-9abc-f3d9f201d515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionMemoryDb">
+      <UniqueIdentifier>{bac7da2b-0f70-4936-8930-d4b9d79a2295}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionClient\SessionClient.cpp">
+      <Filter>SessionClient</Filter>
+    </ClCompile>
+    <ClCompile Include="App\App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionClient\ListenerClient.cpp">
+      <Filter>SessionClient</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionAccount\SessionAccount.cpp">
+      <Filter>SessionAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionGameSvr\SessionGameSvr.cpp">
+      <Filter>SessionGameSvr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Server.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMemoryDb\SessionMemoryDb.cpp">
+      <Filter>SessionMemoryDb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionClient\SessionClient.h">
+      <Filter>SessionClient</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionClient\ListenerClient.h">
+      <Filter>SessionClient</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionAccount\SessionAccount.h">
+      <Filter>SessionAccount</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionGameSvr\SessionGameSvr.h">
+      <Filter>SessionGameSvr</Filter>
+    </ClInclude>
+    <ClInclude Include="App\App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Server.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMemoryDb\SessionMemoryDb.h">
+      <Filter>SessionMemoryDb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Config\WfLoadCfg.cpp" />
+    <ClCompile Include="..\Common\GameInterface\ITable.cpp" />
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_DB.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_ErrCode.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_Fish.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc" />
+    <ClCompile Include="..\Common\Packets\Packet_Server.pb.cc" />
+    <ClCompile Include="Game_Fish\Base\D3DQuaternion.cpp" />
+    <ClCompile Include="Game_Fish\Base\PathController.cpp" />
+    <ClCompile Include="Game_Fish\Base\Transform.cpp" />
+    <ClCompile Include="Game_Fish\Battle\FishLauncher.cpp" />
+    <ClCompile Include="Game_Fish\Battle\FishRes.cpp" />
+    <ClCompile Include="Game_Fish\Battle\FishResMgr.cpp" />
+    <ClCompile Include="Game_Fish\Battle\RuntimeInfo.cpp" />
+    <ClCompile Include="Game_Fish\Cfg\Cfg_Game.cpp" />
+    <ClCompile Include="Game_Fish\DispatcherRoom.cpp" />
+    <ClCompile Include="Game_Fish\DispatcherTable.cpp" />
+    <ClCompile Include="Game_Fish\GameFish.cpp" />
+    <ClCompile Include="Game_Fish\GameService.cpp" />
+    <ClCompile Include="Game_Fish\Object\Bomb.cpp" />
+    <ClCompile Include="Game_Fish\Object\Bullet.cpp" />
+    <ClCompile Include="Game_Fish\Object\BulletMgr.cpp" />
+    <ClCompile Include="Game_Fish\Object\Fish.cpp" />
+    <ClCompile Include="Game_Fish\Object\FishMgr.cpp" />
+    <ClCompile Include="Game_Fish\Object\GameObject.cpp" />
+    <ClCompile Include="Game_Fish\Object\LaserMgr.cpp" />
+    <ClCompile Include="Game_Fish\Object\ObjectFactory.cpp" />
+    <ClCompile Include="Game_Fish\Object\Seat.cpp" />
+    <ClCompile Include="Game_Fish\Player.cpp" />
+    <ClCompile Include="Game_Fish\PlayerMgr.cpp" />
+    <ClCompile Include="Game_Fish\Screen.cpp" />
+    <ClCompile Include="Game_Fish\Skill\BufferMgr.cpp" />
+    <ClCompile Include="Game_Fish\Skill\EffectMgr.cpp" />
+    <ClCompile Include="Game_Fish\Table.cpp" />
+    <ClCompile Include="Game_Fish\TableViewMgr.cpp" />
+    <ClCompile Include="Game_Fish\TableMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Config\Cfgt_jobBean.h" />
+    <ClInclude Include="..\Common\Config\Cfgt_mapBean.h" />
+    <ClInclude Include="..\Common\Config\WfLoadCfg.h" />
+    <ClInclude Include="..\Common\Dispatcher.h" />
+    <ClInclude Include="..\Common\GameInterface\IAppProxy.h" />
+    <ClInclude Include="..\Common\GameInterface\IGame.h" />
+    <ClInclude Include="..\Common\GameInterface\IGameService.h" />
+    <ClInclude Include="..\Common\GameInterface\IPlayer.h" />
+    <ClInclude Include="..\Common\GameInterface\ISessionAccount.h" />
+    <ClInclude Include="..\Common\GameInterface\ISessionGateWay.h" />
+    <ClInclude Include="..\Common\GameInterface\ITable.h" />
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_DB.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_ErrCode.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_Fish.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h" />
+    <ClInclude Include="..\Common\Packets\Packet_Server.pb.h" />
+    <ClInclude Include="..\Common\WfSessionConfig.h" />
+    <ClInclude Include="..\Common\WfSessionType.h" />
+    <ClInclude Include="Game_Fish\Base\D3DHeader.h" />
+    <ClInclude Include="Game_Fish\Base\D3DMatrix.h" />
+    <ClInclude Include="Game_Fish\Base\D3DQuaternion.h" />
+    <ClInclude Include="Game_Fish\Base\D3DVector2.h" />
+    <ClInclude Include="Game_Fish\Base\D3DVector3.h" />
+    <ClInclude Include="Game_Fish\Base\PathController.h" />
+    <ClInclude Include="Game_Fish\Base\Transform.h" />
+    <ClInclude Include="Game_Fish\Battle\FishDead.h" />
+    <ClInclude Include="Game_Fish\Battle\FishLauncher.h" />
+    <ClInclude Include="Game_Fish\Battle\FishRes.h" />
+    <ClInclude Include="Game_Fish\Battle\FishResMgr.h" />
+    <ClInclude Include="Game_Fish\Battle\FishUtility.h" />
+    <ClInclude Include="Game_Fish\Battle\RuntimeInfo.h" />
+    <ClInclude Include="Game_Fish\Cfg\Cfg_Game.h" />
+    <ClInclude Include="Game_Fish\DispatcherRoom.h" />
+    <ClInclude Include="Game_Fish\DispatcherTable.h" />
+    <ClInclude Include="Game_Fish\GameFish.h" />
+    <ClInclude Include="Game_Fish\GamePacket.h" />
+    <ClInclude Include="Game_Fish\GameService.h" />
+    <ClInclude Include="Game_Fish\Object\Bomb.h" />
+    <ClInclude Include="Game_Fish\Object\Bullet.h" />
+    <ClInclude Include="Game_Fish\Object\BulletMgr.h" />
+    <ClInclude Include="Game_Fish\Object\Fish.h" />
+    <ClInclude Include="Game_Fish\Object\FishMgr.h" />
+    <ClInclude Include="Game_Fish\Object\GameObject.h" />
+    <ClInclude Include="Game_Fish\Object\LaserMgr.h" />
+    <ClInclude Include="Game_Fish\Object\ObjectFactory.h" />
+    <ClInclude Include="Game_Fish\Object\Seat.h" />
+    <ClInclude Include="Game_Fish\Player.h" />
+    <ClInclude Include="Game_Fish\PlayerMgr.h" />
+    <ClInclude Include="Game_Fish\Screen.h" />
+    <ClInclude Include="Game_Fish\Skill\BufferMgr.h" />
+    <ClInclude Include="Game_Fish\Skill\EffectMgr.h" />
+    <ClInclude Include="Game_Fish\Table.h" />
+    <ClInclude Include="Game_Fish\TableViewMgr.h" />
+    <ClInclude Include="Game_Fish\TableMgr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dllFish.def" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8C78B35-49E7-4AF6-B309-ED4D97797625}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dllFish</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\Src;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\Run\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\_Obj\win32\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\Src;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\Run\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\_Obj\win32\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\Run\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\_Obj\win32\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\Run\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\_Obj\win32\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;GLOG_NO_ABBREVIATED_SEVERITIES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\engine\public\EngineUtil\Include;..\..\engine\public\EngineNet\include;..\..\engine\public\EngineSql\include;..\..\engine\dependency\curl\include;..\..\engine\dependency\Boost\include;..\..\engine\dependency\mysql\include;..\..\engine\dependency\protobuf\Include;..\..\engine\dependency\glog\windows;..\Common;.\;.\Game_Fish;.\Game_Fish\Battle;.\Game_Fish\Object;.\Game_Fish\Base;..\Common\GameInterface</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\engine\public\libs;..\..\engine\dependency\curl\lib;..\..\engine\dependency\Boost\lib;..\..\engine\dependency\mysql\lib\;..\..\engine\dependency\protobuf\Lib;..\..\engine\dependency\glog\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>EngineUtil.lib;EngineNet.lib;EngineSql.lib;libmysql.lib;libprotobuf.lib;FishDeadd.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>dllFish.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName)$(TargetExt) "../Run/svrGame"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;GLOG_NO_ABBREVIATED_SEVERITIES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\engine\public\EngineUtil\Include;..\..\engine\public\EngineNet\include;..\..\engine\public\EngineSql\include;..\..\engine\dependency\curl\include;..\..\engine\dependency\Boost\include;..\..\engine\dependency\mysql\include;..\..\engine\dependency\protobuf\Include;..\..\engine\dependency\glog\windows;..\Common;.\;.\Game_Fish;.\Game_Fish\Battle;.\Game_Fish\Object;.\Game_Fish\Base;..\Common\GameInterface</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\engine\public\libs;..\..\engine\dependency\curl\lib;..\..\engine\dependency\Boost\lib;..\..\engine\dependency\mysql\lib\;..\..\engine\dependency\protobuf\Lib;..\..\engine\dependency\glog\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>EngineUtil.lib;EngineNet.lib;EngineSql.lib;libmysql.lib;libprotobuf.lib;FishDeadd.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>dllFish.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName)$(TargetExt) "../Run/svrGame"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\engine\public\EngineUtil\Include;..\..\engine\public\EngineNet\include;..\..\engine\public\EngineSql\include;..\..\engine\dependency\curl\include;..\..\engine\dependency\Boost\include;..\..\engine\dependency\mysql\include;..\..\engine\dependency\protobuf\Include;..\..\engine\dependency\glog\windows;..\Common;.\;.\Game_Fish;.\Game_Fish\Battle;.\Game_Fish\Object;.\Game_Fish\Base;..\Common\GameInterface</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\engine\public\libs;..\..\engine\dependency\curl\lib;..\..\engine\dependency\Boost\lib;..\..\engine\dependency\mysql\lib\;..\..\engine\dependency\protobuf\Lib;..\..\engine\dependency\glog\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>EngineUtil.lib;EngineNet.lib;EngineSql.lib;libmysql.lib;libprotobuf.lib;FishDeadd.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>dllFish.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName)$(TargetExt) "../Run/svrGame"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\engine\public\EngineUtil\Include;..\..\engine\public\EngineNet\include;..\..\engine\public\EngineSql\include;..\..\engine\dependency\curl\include;..\..\engine\dependency\Boost\include;..\..\engine\dependency\mysql\include;..\..\engine\dependency\protobuf\Include;..\..\engine\dependency\glog\windows;..\Common;.\;.\Game_Fish;.\Game_Fish\Battle;.\Game_Fish\Object;.\Game_Fish\Base;..\Common\GameInterface</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\engine\public\libs;..\..\engine\dependency\curl\lib;..\..\engine\dependency\Boost\lib;..\..\engine\dependency\mysql\lib\;..\..\engine\dependency\protobuf\Lib;..\..\engine\dependency\glog\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>EngineUtil.lib;EngineNet.lib;EngineSql.lib;libmysql.lib;libprotobuf.lib;FishDeadd.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>dllFish.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName)$(TargetExt) "../Run/svrGame"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

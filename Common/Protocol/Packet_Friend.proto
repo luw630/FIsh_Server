@@ -1,0 +1,122 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+//好友系统
+enum emPacket_Friend {
+	em_CS_FriendList			= 0x220;	//请求好友列表
+	em_SC_FriendList			= 0x221;	//好友列表
+	
+	em_CS_FriendReqList			= 0x22c;	//新好友请求
+	em_SC_FriendReqList			= 0x22d;	//新好友请求
+
+	em_CS_FriendFind			= 0x22e;	//查找好友
+	em_SC_FriendFindRst			= 0x22f;	//查找好友结果
+	
+	em_CS_ReqAddFriend			= 0x222;	//请求添加好友
+	em_CS_DelFriend				= 0x223;	//删除好友
+
+	em_SC_AddFriend				= 0x224;	//添加新好友
+	
+	em_SC_NotifyReqAddFriend	= 0x225;	//通知添加好友请求
+	em_CS_FriendVerifyOtherReq	= 0x226;	//确认对方添加好友的请求	
+	em_SC_FriendNotifyVerifyRst	= 0x227;	//通知对方的确认结果
+	
+	em_CS_FriendSendMsg			= 0x228;	//给好友发消息
+	em_SC_NotifyFriendMsg		= 0x229;	//通知好友发送给的消息
+	
+	em_CS_FriendMsgRecord		= 0x22a;	//消息记录
+	em_SC_FriendMsgRecord		= 0x22b;	//消息记录		
+}
+
+message t_FriendItem{
+	required int32 m_playerid = 1;		//玩家id
+	required string m_name = 2;			//名字
+	required uint64 m_money = 3;		//金币
+	required int32 m_headid = 4;		//头像id
+}
+message t_FriendReqItem{
+	required int32 m_playerid = 1;		//玩家id
+	required string m_name = 2;			//名字
+	required int32 m_headid = 3;		//头像id
+	required int32 m_time = 4;			//时间
+}
+message t_FriendMsgRecordItem{
+	required string m_content = 1;		//内容
+	required int32 m_time = 2;			//时间
+}
+
+
+//好友列表
+message SC_FriendList{
+	repeated t_FriendItem m_data = 1;		
+}
+
+//新好友请求
+message SC_FriendReqList{
+	repeated t_FriendReqItem m_data = 1;		
+}
+
+//请求添加好友
+message CS_ReqAddFriend{
+	required int32 m_playerid = 1;		//玩家id
+}
+
+//查找好友
+message CS_FriendFind{
+	required int32 m_playerid = 1;		//玩家id
+}
+//查找好友结果
+message SC_FriendFindRst{
+	required int32 bfind = 1;			//0找到，1没有找到
+	required int32 playerid = 2;		//玩家id
+	optional string name = 3;	
+	optional int32 headid = 4;	
+}
+
+//删除好友
+message CS_DelFriend{
+	required int32 m_friendid = 1;		//玩家id
+}
+
+//添加新好友
+message SC_AddFriend{
+	required t_FriendItem m_data = 1;		
+}
+
+//通知添加好友请求
+message SC_NotifyReqAddFriend{
+    required uint32 playerid = 1;		//请求者玩家id	
+	required string name = 2;
+	required int32 headid = 3;	
+}
+//确认对方添加好友的请求
+message CS_FriendVerifyOtherReq{
+	required int32 m_agree = 1;			//0拒绝，1同意	
+	required int32 m_playerid = 2;		//请求者玩家id	
+}
+//通知对方的确认结果
+message SC_FriendNotifyVerifyRst{
+	required int32 agree = 1;			//0拒绝，1同意	
+    required uint32 playerid = 2;		//请求者玩家id	
+	required string name = 3;
+	required int32 headid = 4;
+}
+//给好友发消息
+message CS_FriendSendMsg{
+	required int32 m_playerid = 1;		//
+	required string m_content = 2;		//内容
+}
+//通知好友发送给的消息
+message SC_NotifyFriendMsg{
+	required int32 m_playerid = 1;		//
+	required string m_content = 2;		//内容
+}
+//消息记录
+message CS_FriendMsgRecord{
+	required int32 m_playerid = 1;		//
+}
+//消息记录
+message SC_FriendMsgRecord{
+	repeated t_FriendMsgRecordItem m_data = 1;		//
+}

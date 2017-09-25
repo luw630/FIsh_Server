@@ -1,0 +1,24 @@
+syntax = "proto2";
+package rpc;
+
+enum emPacket {
+	emPacket_Login_Begin	= 0x100;	
+	emPacket_Login_End		= 0x1ff;	
+
+	emPacket_Lobby_Begin	= 0x200;	
+	emPacket_Lobby_End		= 0x2ff;	
+
+	emPacket_Fish_Begin		= 0x300;	
+	emPacket_Fish_End		= 0x3ff;	
+}
+
+//进入游戏玩家数据
+message t_EnterGamePlayerData
+{
+    required uint32 m_playerid = 1;		//playerid
+	required uint32 m_headid = 2;		//头像id
+	required string m_nickname = 3;		//玩家别名
+	required int64 m_money = 4;		//金币
+}
+
+

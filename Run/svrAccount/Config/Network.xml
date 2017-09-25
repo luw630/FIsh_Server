@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<!-- NetWayMgr -->
+	<ProxyConnector Id="1" IP="127.0.0.1" Port="19000" VerificationCode="123456" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492"/>
+	<GameConnector Id="1" IP="127.0.0.1" Port="22000" VerificationCode="123456" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492"/>
+	
+	<!-- client -->
+	<GateWayListener Id="1" Port="23000" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100">
+		<Listener NetType="1" IP="127.0.0.1" />
+	</GateWayListener>
+</Sessions>

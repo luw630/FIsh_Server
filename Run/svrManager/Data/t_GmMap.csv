@@ -1,0 +1,9 @@
+t_cmd,t_svrType
+string,int32
+command,"服务端类型（Account 2, Game 1）"
+/player/online/number,2
+/room/online/number,1
+/notic/system/get,2
+/notic/system/add,2
+/notic/system/edit,2
+/notic/system/delete,2

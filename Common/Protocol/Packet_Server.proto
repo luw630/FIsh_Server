@@ -1,0 +1,205 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+//G 网关
+//A 账号服务器
+enum emPacket_Server {
+	EM_sys_Begin			= 0x10;	
+	EM_Sys_SvrNodeLogin		= 0x11;	//服务器节点登录
+	EM_Sys_SvrNodeLoginRst	= 0x12;	//服务器节点登录结果
+	
+	EM_GA_Login				= 0x13;	//登陆
+	EM_AG_LoginRst			= 0x14;	//绑定会话
+	
+	EM_AG_KickPlayer		= 0x15;	//踢出玩家
+	
+	EM_AGame_EnterGame		= 0x16;	//进入游戏
+	EM_GameA_EnterGameRst	= 0x17;	//进入游戏结果
+
+	EM_AGame_LeaveGame		= 0x18;	//进入游戏
+	EM_GameA_LeaveGameRst	= 0x19;	//进入游戏结果
+	
+	EM_Game_Work2Master_UpdateTableData = 0x1a;	//更新桌子显示数据
+	EM_Game_Work2Master_SetPlayerState = 0x1b;	//设置玩家状态（成功进入游戏，进入游戏失败）	
+	
+	
+	//好友系统
+	EM_Friend_ReqAddFriend	= 0x20;	//通知对方请求添加好友
+	EM_Friend_AgreeAddFiend	= 0x21;	//同意添加好友
+	EM_Friend_RefuseAddFiend= 0x22;	//拒绝添加好友
+	EM_Friend_SendMsg		= 0x23;	//拒绝添加好友
+	
+	//SvrManager与服务器的通信
+	
+	EM_SvrManager_Post		= 0x24;	//请求
+	EM_SvrManager_Response	= 0x25;	//返回
+	
+	EM_GA_Offline			= 0x26;	//网关通知Account玩家离线
+	EM_GGame_Offline		= 0x27;	//网关通知Game玩家离线
+	
+	//GameSvr,CfgSvr
+	EM_GameCfg_LoadGameCfg	= 0x28;	//加载游戏配置
+	EM_CfgGame_GameCfgData  = 0x29;	//游戏配置
+	//日志消息
+	EM_Log_InsertLog	 	= 0x2a;	//插入日志
+	
+	//游戏配置
+	EM_Fish_ReqRoomCfg	 	= 0x2b;	//房间配置
+	EM_Fish_RoomCfgData	 	= 0x2c;	//房间配置
+	
+	EM_sys_End				= 0xff;	
+}
+//服务器节点登录
+message Sys_SvrNodeLogin
+{
+    required int32 m_nodeid = 1;	//节点id
+	required string m_key = 2;		//验证码
+}
+//服务器节点登录结果
+message Sys_SvrNodeLoginRst
+{
+    required int32 m_rst = 1;
+}
+message GA_Login
+{
+    required string m_account = 1;		//playerid
+	required string m_param = 2;			//参数 sessionId;ip
+}
+
+message AG_LoginRst
+{
+    required uint32 m_playerid = 1;		//playerid
+	required uint64 m_param = 2;		//会话id
+}
+message GA_Offline
+{
+	required uint32 m_playerid = 1;		
+}
+message GGame_Offline
+{
+	required uint32 m_playerid = 1;
+	required uint64 m_sessionid = 2;	
+}
+
+message AG_KickPlayer
+{
+    required uint32 m_playerid = 1;		
+}
+
+message AGame_EnterGame
+{
+    required uint32 m_playerid = 1;						//playerid
+	required int32 m_gameid = 2;						//游戏id
+	required int32 m_gatewayid = 3;						//游戏id
+	required t_EnterGamePlayerData m_playerdata = 4;	//玩家数据
+}
+message GameA_EnterGameRst
+{
+	required int32 m_rst = 1;			//结果
+    required uint32 m_playerid = 2;		//playerid
+	required int32 m_gameid = 3;		//游戏id
+}
+message AGame_LeaveGame
+{
+    required uint32 m_playerid = 1;						//playerid
+}
+message GameA_LeaveGameRst
+{
+	required int32 m_rst = 1;			//结果
+    required uint32 m_playerid = 2;		//playerid
+	optional t_EnterGamePlayerData m_playerdata = 3;	//玩家数据
+}
+//更新桌子显示数据
+message Game_Work2Master_UpdateTableData
+{
+
+}
+//设置玩家状态（成功进入游戏，进入游戏失败）	
+message Game_Work2Master_SetPlayerState
+{
+    required uint32 m_playerid = 1;		//playerid
+	required int32 m_status = 2;		//（1成功进入游戏，2进入游戏失败）	
+}
+
+message Friend_ReqAddFriend
+{
+    required uint32 playerid = 1;		
+	required string name = 2;
+	required int32 headid = 3;	
+}
+message Friend_AgreeAddFiend
+{
+    required uint32 playerid = 1;		
+	required string name = 2;
+	required int32 headid = 3;	
+	required int64 money = 4;
+}
+message Friend_RefuseAddFiend
+{
+    required uint32 playerid = 1;		
+	required string name = 2;
+	required int32 headid = 3;	
+	required int64 money = 4;
+}
+
+message Friend_SendMsg
+{
+    required uint32 playerid = 1;		
+	required string name = 2;
+	required int32 headid = 3;	
+	required string content = 4;
+}
+
+message SvrManager_Post
+{
+	required uint64 postid = 1;
+    required string cur = 2;		
+	required string body = 3;
+}
+message SvrManager_Response
+{
+	required uint64 postid = 1;	
+	required string body = 2;
+}
+message GameCfg_LoadGameCfg
+{
+	required uint32 gameid = 1;		//游戏id
+}
+message CfgGame_GameCfgData
+{
+	required uint32 gameid = 1;		//游戏id
+	required uint32 tablenum = 2;	//桌子数量
+}
+message Log_InsertLog
+{
+	required string sql = 1;	
+}
+message Fish_ReqRoomCfg
+{
+	required uint32 roomid = 1;		//房间id
+}
+//桌子配置
+message t_FishTableLvl{
+	required uint32 id = 1;			//id
+	required uint32 step = 2;		//难度等级（最容易，容易，难，最难，死难）
+	required uint32 placeType = 3;	//场地类型（小,中,大）
+	required int32 radio = 4;		//抽水比例(正数为抽水比例,负数为防水比例)
+	required int32 minScore = 5;		//最小压分
+	required int32 maxScore = 6;		//最大压分
+	required int32 coinPoint = 7;		//投币比例（1到10000）		
+}
+//桌子数据
+message t_FishTableCfgItem{
+	required uint32 tableid = 1;			//玩家id
+	required string tablename = 2;			//名字
+	required uint32 lvlId = 3;				//桌子配置id
+	required uint32 totalGunPoints = 4;		//总发炮分数初值
+	required uint32 totalFishPoints = 5;	//总击中鱼得分初值
+}
+message Fish_RoomCfgData
+{
+	required uint32 roomid = 1;			//房间id
+	repeated t_FishTableLvl tableLvl = 2;
+	repeated t_FishTableCfgItem datas = 3;
+}
+

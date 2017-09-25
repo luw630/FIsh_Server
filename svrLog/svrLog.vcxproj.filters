@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e1b5af11-07d1-4377-bd6d-4b16bc459891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{5218f712-d143-4b20-bf7d-1c9d35f5602d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{49536337-4100-4866-ad87-a6261d2930b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SeesionDb">
+      <UniqueIdentifier>{f9d44e75-f366-4984-9eae-4da8e2bc0bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionProxy">
+      <UniqueIdentifier>{3c12e919-a407-45ba-9ace-877b6ed666e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App\App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="SeesionDb\SeesionDb.cpp">
+      <Filter>SeesionDb</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionProxy\SessionProxy.cpp">
+      <Filter>SessionProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IWorkMgr.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ISessionProxy.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_DBLog.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App\App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="SeesionDb\SeesionDb.h">
+      <Filter>SeesionDb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfSessionType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionProxy\SessionProxy.h">
+      <Filter>SessionProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfCommonPackets.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IWorkMgr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ISessionProxy.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_DBLog.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<!-- NetWayMgr -->
+	<ProxyConnector Id="1" IP="127.0.0.1" Port="19000" VerificationCode="123456" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492"/>
+
+</Sessions>

@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+
+enum ErrCode
+{
+    Error_OK = 0;				//成功
+	Error_Unknow =1;
+	Error_Account = 2;			//账号错误
+	Error_Pwd = 3;				//密码错误
+	
+	Error_sys_mysql = 4;
+	Error_registerAccount = 5;	
+
+	Error_LoginGameSessionKey = 6;	
+	Error_LoginGameAccountId = 7;	
+};

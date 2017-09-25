@@ -1,0 +1,272 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+//子弹类型
+enum emBulletType
+{
+	BulletType_fishingnet = 1;		//鱼网
+	BulletType_normal = 2;			//普通子弹 
+	BulletType_electromagnetism = 3;//电磁炮弹
+	BulletType_drill = 4;			//钻头炮
+	BulletType_bomb = 5;			//炸弹
+	BulletType_laser = 6;			//激光
+	BulletType_max = 7;				
+}
+
+enum emPacket_Fish { 
+	em_Fish_Begin				= 0x300;	
+		
+	em_CS_FishGameData			= 0x301;		//捕鱼大厅数据
+	em_SC_FishGameData			= 0x302;		//捕鱼大厅数据
+	
+	em_CS_FishTables			= 0x303;		//获取桌子列表
+	em_SC_FishTables			= 0x304;		//桌子列表数据
+	
+	em_CS_FishEnterTable		= 0x305;		//进入桌子
+	em_SC_FishEnterTableRst		= 0x306;		//进入桌子结果
+	
+	//进入捕鱼后的消息
+	em_SC_FishNotifyAddPlayerMySelf	= 0x307;	//角色自己进入
+	em_SC_FishNotifyAddPlayer		= 0x308;	//其它角色进入
+	
+	em_SC_FishNotifyFireBullet	= 0x309;		//发射实体(子弹)
+	em_SC_FishNotifyFireFish	= 0x30a;		//发射实体(鱼)	
+	em_SC_FishNotifyAddBullet	= 0x30b;		//添加实体(子弹)
+	em_SC_FishNotifyAddBomb		= 0x30c;			//添加实体(炸弹)
+	em_SC_FishNotifyAddFish		= 0x30d;		//添加实体(鱼)
+	em_SC_FishNotifyRmvBullet	= 0x30e;		//移除实体(子弹)
+	em_SC_FishNotifyRmvFish		= 0x30f;		//移除实体(鱼)
+	em_SC_FishNotifyRmvPlayer	= 0x310;		//其它角色离开
+	
+	em_CS_FishReqSwitchCannon		= 0x311;	//玩家要求换炮
+	em_SC_FishNotifySwitchCannon	= 0x312;	//通知换炮（玩家自身和其他玩家）
+	
+	em_CS_FishChangeFireCost = 0x313;			//玩家改变倍率	
+	em_SC_FishChangeFireCost = 0x314;			//玩家改变倍率结果
+	
+	em_CS_FishSendBullet		= 0x315;		//发射子弹
+	em_SC_FishNotifyHitFish		= 0x316;		//击中鱼
+	
+	em_SC_FishLockFish		= 0x317;		//锁定炮
+	em_SC_FishRmvDrillBomb		= 0x318;	//钻头炮消失
+	em_CS_FishNotifyHitted = 	0x319; //客户端通知服务器子弹击中
+	
+	em_SC_FishAllFishLeave = 	0x31a; //移除所有鱼
+	em_SC_FishEnterNextLvl = 	0x31b; //进入下一关
+	
+	em_CS_FishQuitGame			= 0x31c;		//退出捕鱼
+	em_Fish_End					= 0x3ff;
+}
+
+message t_Vector2
+{
+    required float x = 1;
+	required float y = 2;
+}
+
+message t_Vector3{
+	required float x = 1;			
+	required float y = 2;			
+	required float z = 3;
+}
+
+message t_fish_seat{
+	required int32 m_seatid = 1;			//位置
+	required int32 m_playerid = 2;			//玩家id
+	required string m_playername = 3;		//玩家名字
+	required int32 m_headid = 4;			//头像id
+}
+//捕鱼的桌子
+message t_fish_table{
+	required int32 m_tableid = 1;			//桌子id
+	repeated t_fish_seat m_seats = 2;		//位置
+}
+//捕鱼的玩家
+message t_FishPlayer{
+	required int32 m_seatid = 1;			//位置
+	required int32 m_playerid = 2;			//玩家id
+	required string m_playername = 3;		//玩家名字
+	required int32 m_headid = 4;			//玩家头像id
+}
+
+//捕鱼大厅数据
+message SC_FishGameData{
+	required int32 m_playernum = 1;			//在线玩家数量
+	repeated t_fish_table 	m_tables = 2;	//捕鱼桌子
+}
+//桌子列表数据
+message SC_FishTables{
+	repeated t_fish_table 	m_tables = 1;	//捕鱼桌子
+}
+//进入桌子
+message CS_FishEnterTable{
+	required int32 m_tableid = 1;		//桌子id
+	required int32 m_seatid = 2;		//位置编号
+}
+//进入桌子结果
+message SC_FishEnterTableRst{
+	required int32 m_rst = 1;				//结果
+	required int32 m_tableId = 2;			//
+	required int32 m_seatId = 3;			//
+	repeated t_FishPlayer m_players = 4;	//seat被占时候，刷新桌子的显示
+	optional int32 m_bomb = 5;				//炮弹类型	
+}
+
+//角色离开
+message SC_FishPlayerLeave{
+	required int32 m_seatid = 1;			//位置
+}
+
+//////////////////////////
+//进入捕鱼后的消息
+
+//角色自己进入
+message SC_FishNotifyAddPlayerMySelf
+{
+	required int32 m_seatid = 1;			//位置
+	required int32 m_playerid = 2;			//玩家id
+	required string m_playername = 3;		//玩家名字
+	required int32 m_bulletNum = 4;			//子弹数量
+	required int32 m_bomb = 5;				//炮弹类型	
+}
+//其它角色进入
+message SC_FishNotifyAddPlayer
+{
+	required int32 m_seatid = 1;			//位置
+	required int32 m_playerid = 2;			//玩家id
+	required string m_playername = 3;		//玩家名字
+	required int32 m_bomb = 4;				//炮弹类型	
+}
+
+//发射实体(子弹)
+message SC_FishNotifyFireBullet
+{
+	required int32 m_objid = 1;				//对象id
+	required int32 m_type = 2;				//子弹类型
+	required int32 m_seatid =3;				//位置
+	required t_Vector2 m_dir = 4;			//方向
+}
+
+//发射实体(鱼)
+message SC_FishNotifyFireFish
+{
+	required int32 m_objid = 1;				//对象id
+	required int32 m_fishtype = 2;			//鱼类型
+	required int32 m_pathtype = 3;			//路径type
+	required int32 m_pathid = 4;			//路径id 
+}
+
+//添加实体(子弹)
+message SC_FishNotifyAddBullet
+{
+	required int32 m_objid = 1;				//对象id
+	required int32 m_type = 2;				//子弹类型
+	required int32 m_seatid =3;				//属于发射位置
+	required t_Vector2 m_dir = 4;			//方向
+	required t_Vector2 m_pos = 5;			//当前位置
+}
+//添加实体(炸弹)
+message SC_FishNotifyAddBomb
+{
+	required int32 m_objid = 1;				//对象id
+	required int32 m_playerid = 2;			//位置上的玩家id
+	required int32 m_seatid =3;				//位置
+	repeated t_Vector2 m_path = 4;			//路径
+}
+//添加实体(鱼)
+message SC_FishNotifyAddFish
+{
+	required int32 m_objid = 1;				//对象id
+	required int32 m_fishtype = 2;			//鱼类型
+	required int32 m_pathtype = 3;			//路径type
+	required int32 m_pathid = 4;			//路径id 
+	required float m_runper = 5;			//运行百分比
+}
+
+//移除实体(子弹)
+message SC_FishNotifyRmvBullet
+{
+	required int32 m_objid = 1;				//对象id
+}
+//移除实体(鱼)
+message SC_FishNotifyRmvFish
+{
+	required int32 m_objid = 1;				//对象id
+}
+//其它角色离开
+message SC_FishNotifyRmvPlayer
+{
+	required int32 m_seatid = 1;			//位置
+}
+
+
+//玩家要求换炮
+message CS_FishReqSwitchCannon
+{
+	required int32 m_icannontype = 1;
+}	
+
+//通知换炮（玩家自身和其他玩家）
+
+message SC_FishNotifySwitchCannon
+{
+	required int32 m_iplayerid = 1;
+	required int32 m_iseatid = 2;
+	required int32 m_icannontype = 3;
+}
+
+//玩家改变倍率		
+message CS_FishChangeFireCost
+{
+	required int32 m_icost = 1;
+}
+
+
+//玩家改变倍率结果	
+message SC_FishChangeFireCost
+{
+	required int32 m_iseatid = 1;
+	required int32 m_icost = 2;
+}
+
+
+//发射子弹
+message CS_FishSendBullet
+{
+	required int32 m_multiple = 1;			//倍数
+	required t_Vector2 m_dir = 2;
+}
+
+
+//击中鱼
+message SC_FishNotifyHitFish
+{
+	required int32 m_bulletid = 1;			//子弹id
+	required int32 m_fishid = 2;			//鱼的id
+	required int32 m_seatid =3;				//所在位置的玩家获取金币
+	required int32 m_playerid = 4;	
+	required int32 m_money = 5;				//获取金币
+}
+
+message SC_FishLockFish
+{
+	required int32 m_fishid = 1;			//鱼的id
+	required int32 m_seatid =2;				//
+}
+message SC_FishRmvDrillBomb
+{
+	required int32 m_bulletId = 1;			//鱼的id
+	required int32 m_seatid =2;				//所在位置的玩家获取金币
+	required int32 m_playerid = 3;	
+	required int32 m_money = 4;				//获取金币
+}
+
+message CS_FishNotifyHitted
+{
+	required int32 m_fishid = 1;	//击中了哪条鱼
+}
+message SC_FishEnterNextLvl
+{
+	required int32 m_Lvl = 1;			//关卡id
+}

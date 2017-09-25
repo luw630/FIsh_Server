@@ -1,0 +1,8 @@
+id,fishid,intervalTime,perLineFishNum,path
+int32,int32,int32,int32,int32
+id,,每条鱼产生的时间间隔,每条鱼产生鱼的个数,鱼线
+0,2,500,5,10
+1,1,500,5,11
+2,5,500,5,12
+3,13,500,5,13
+4,2,500,5,14

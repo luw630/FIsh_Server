@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<MemoryDbConnector Id="1" IP="127.0.0.1" Port="25500" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100"/>
+</Sessions>

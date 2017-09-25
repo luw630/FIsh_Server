@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e1b5af11-07d1-4377-bd6d-4b16bc459891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{10d4282a-6f82-47d4-9fc7-4c7b21af3ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish">
+      <UniqueIdentifier>{a5d27e00-0922-4d58-9a8b-c255f9ef25ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish\Object">
+      <UniqueIdentifier>{e1bdbc02-ae44-44ec-97e0-ce4d0a355067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish\Skill">
+      <UniqueIdentifier>{9ed1779c-00ef-41f3-8d3f-6a057f3da27b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Config">
+      <UniqueIdentifier>{e627bb45-541b-42d8-97f8-b9e672c254f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish\Battle">
+      <UniqueIdentifier>{2613072d-93f3-4f3d-a22a-36d02ab04008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GameInterface">
+      <UniqueIdentifier>{4dd389d3-0b09-49a1-a96c-77dd76961add}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish\Base">
+      <UniqueIdentifier>{ca07ed9f-081f-464f-b5a5-fbe014586b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Fish\Cfg">
+      <UniqueIdentifier>{099741d5-181d-4b98-9e2c-e3aa40045194}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_DB.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_ErrCode.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Fish.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Server.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Skill\BufferMgr.cpp">
+      <Filter>Game_Fish\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Skill\EffectMgr.cpp">
+      <Filter>Game_Fish\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\Bullet.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\Fish.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\GameFish.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Player.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\PlayerMgr.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\Seat.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Config\WfLoadCfg.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\BulletMgr.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\FishMgr.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\GameObject.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameInterface\ITable.cpp">
+      <Filter>Common\GameInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\GameService.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Battle\FishLauncher.cpp">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Battle\FishRes.cpp">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Battle\FishResMgr.cpp">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Battle\RuntimeInfo.cpp">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Base\D3DQuaternion.cpp">
+      <Filter>Game_Fish\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Base\PathController.cpp">
+      <Filter>Game_Fish\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Base\Transform.cpp">
+      <Filter>Game_Fish\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\ObjectFactory.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Table.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\TableMgr.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\TableViewMgr.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\DispatcherRoom.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\DispatcherTable.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Cfg\Cfg_Game.cpp">
+      <Filter>Game_Fish\Cfg</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\Bomb.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Screen.cpp">
+      <Filter>Game_Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Fish\Object\LaserMgr.cpp">
+      <Filter>Game_Fish\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_DB.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_ErrCode.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Fish.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Server.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Dispatcher.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfSessionConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfSessionType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Skill\BufferMgr.h">
+      <Filter>Game_Fish\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Skill\EffectMgr.h">
+      <Filter>Game_Fish\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\Bullet.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\Fish.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\GameFish.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Player.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\PlayerMgr.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\GamePacket.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\Seat.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\Cfgt_jobBean.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\Cfgt_mapBean.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\WfLoadCfg.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\BulletMgr.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\FishMgr.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\GameObject.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\IAppProxy.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\IGame.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\IGameService.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\IPlayer.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\ITable.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\ISessionAccount.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameInterface\ISessionGateWay.h">
+      <Filter>Common\GameInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\GameService.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\FishLauncher.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\FishRes.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\FishResMgr.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\FishUtility.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\RuntimeInfo.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\D3DHeader.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\D3DMatrix.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\D3DQuaternion.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\D3DVector2.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\D3DVector3.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\PathController.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Base\Transform.h">
+      <Filter>Game_Fish\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\ObjectFactory.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Table.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\TableMgr.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\TableViewMgr.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\DispatcherRoom.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\DispatcherTable.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Cfg\Cfg_Game.h">
+      <Filter>Game_Fish\Cfg</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Battle\FishDead.h">
+      <Filter>Game_Fish\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\Bomb.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Screen.h">
+      <Filter>Game_Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Fish\Object\LaserMgr.h">
+      <Filter>Game_Fish\Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dllFish.def" />
+  </ItemGroup>
+</Project>

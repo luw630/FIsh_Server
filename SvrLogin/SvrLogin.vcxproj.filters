@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{a19dd3b1-9ec4-486a-8104-253f6a13069b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client">
+      <UniqueIdentifier>{513fa8a6-a69c-451a-80b3-22b2eb47076e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{0bbda921-b121-4a16-8e04-69d765f9db15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{6c995ecb-99dd-4c11-a00a-1560eb7f580f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SeesionDb">
+      <UniqueIdentifier>{65b4d2b6-0a5b-4fc1-8b06-203b7a5d9542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionMemoryDb">
+      <UniqueIdentifier>{9cec76da-971e-4fb2-91dc-6a8c39a9c976}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App\App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\SessionClient.cpp">
+      <Filter>Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\SessionClientMgr.cpp">
+      <Filter>Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_DB.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_ErrCode.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Fish.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IWorkMgr.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SeesionDb\SeesionDb.cpp">
+      <Filter>SeesionDb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IOCPModel.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IOMgr.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionMemoryDb\SessionMemoryDb.cpp">
+      <Filter>SessionMemoryDb</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App\App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\SessionClient.h">
+      <Filter>Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\SessionClientMgr.h">
+      <Filter>Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_DB.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_ErrCode.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Fish.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IWorkMgr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SeesionDb\SeesionDb.h">
+      <Filter>SeesionDb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IOCPModel.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IOModel.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IOMgr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IOContext.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionMemoryDb\SessionMemoryDb.h">
+      <Filter>SessionMemoryDb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfCommonPackets.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

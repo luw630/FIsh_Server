@@ -1,0 +1,113 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+enum emPacket_Db {
+	em_SD_LoadData				= 0x50;	//加载玩家数据
+	em_DS_PlayerData			= 0x51;	//玩家数据
+	em_SD_InsertPlayer			= 0x52;	//插入Player
+ 	em_SD_SavePlayer			= 0x53;	//保存玩家数据
+	
+	em_SD_FindPlayer			= 0x54;	//查找玩家
+	em_DS_FindPlayerRst			= 0x55;	//查找玩家
+}
+
+message t_FriendItemData
+{
+	required int32 playerid = 1;
+	required string name = 2;
+	required int32 headid = 3;	
+	required int64 money = 4;
+}
+message t_MailItemData
+{
+	required string title = 1;
+	required string content = 2;
+	required uint32 time = 3;	
+}
+message t_FriendReqItemData
+{
+	required int32  playerid = 1;	//请求者id
+	required string name = 2;		//请求者name
+	required int32 headid = 3;		//头像
+	required uint32 time = 4;		//请求时间
+	required int64 money = 5;
+}
+message t_FriendDatas
+{
+    repeated t_FriendItemData friends = 1;
+	repeated t_FriendReqItemData friendreq = 2;
+}
+message t_MailDatas
+{
+    repeated t_MailItemData mails = 1;
+}
+message t_BankDatas
+{
+    required bool havepwd = 1;		
+	required string pwd = 2;	
+	required int64 money = 3;
+}
+
+//玩家基础数据
+message t_playerBaseData
+{
+	required string nickname = 1;
+	required string accountid = 2;	
+	required int32 headid = 3;		//头像id
+	required int64 money = 4;
+	required int32 sex = 5;	
+	
+	optional t_BankDatas bankdata = 6;	
+}	
+	
+//加载玩家数据
+message SD_LoadData
+{
+    required string m_accountid = 1;		
+	required string m_param = 2;		//参数
+	required int32 m_svrnodeid = 3;		//节点id
+}
+//玩家数据
+message DS_PlayerData
+{
+	required int32 m_rst = 1;			//是否成功（0 成功，1不存在player，100其它错误）
+    required uint32 m_playerid = 2;		//玩家id
+	required string m_accountid = 3;	//账号id
+	required string m_param = 4;		//参数
+	required int32 m_svrnodeid = 5;		//节点id
+	optional t_playerBaseData m_playerinfo = 6;			
+	optional t_FriendDatas m_friend = 7;
+	optional t_MailDatas m_mail = 8;	
+}
+message SD_InsertPlayer
+{
+    required string m_accountid = 1;		//账号id
+	required t_playerBaseData m_data = 2;	
+}
+message SD_SavePlayer
+{
+    required uint32 m_playerid = 1;		//玩家id
+	required t_playerBaseData m_data = 2;	
+}
+
+message param_FindPlayer
+{
+	required uint32 playerId = 1;
+    required uint32 selectPlayerId = 2;
+}
+//查找玩家
+message SD_FindPlayer
+{
+    required uint32 playerid = 1;			
+	required param_FindPlayer param = 2;	
+}
+//查找玩家
+message DS_FindPlayerRst
+{
+    required uint32 bfind = 1;				//是否找到
+	required param_FindPlayer param = 2;	
+	optional string name = 3;
+	optional int32 headid = 4;	
+}
+

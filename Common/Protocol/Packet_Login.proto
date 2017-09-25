@@ -1,0 +1,59 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+enum emPacket_Login {
+	EM_CS_Login				= 0x101;	//登陆
+	EM_SC_LoginRst			= 0x102; 	//登陆结果
+	EM_CS_LoginGateWayOld	= 0x103;	//登陆网关服务器
+	EM_CS_LoginGateWay		= 0x104;	//登陆网关服务器
+	EM_SC_LoginGateWayRst	= 0x105; 	//登陆网关服务器结果
+	EM_SC_PlayerOtherLogin	= 0x106; 	//玩家别地登录
+	
+	EM_CS_Register			= 0x107;	//注册
+	EM_SC_RegisterRst		= 0x108; 	//注册结果
+}
+
+//登陆
+message CS_Login {
+	required int32 m_type = 1;		//登录平台
+	required string m_account = 2;	//账号
+	required string m_pwd = 3;		//密码
+	optional string m_param = 4;	//附加参数
+}
+
+//登陆结果
+message SC_LoginRst
+{
+	required int32 m_rst = 1;			//是否成功 0成功
+	optional string m_sessionid = 2;	//回话id
+}
+
+message CS_Register {
+	required string m_account = 1;	//账号
+	required string m_pwd = 2;		//密码
+}
+
+message SC_RegisterRst
+{
+	required int32 m_rst = 1;			//是否成功 0成功
+}
+
+//登陆网关服务器（跳过登录验证）
+message CS_LoginGateWayOld {
+  required string m_account = 1;	
+}
+message CS_LoginGateWay {
+  required string m_sessionid = 1;	//回话id
+}
+//登陆网关服务器结果
+message SC_LoginGateWayRst
+{
+	required int32 m_rst = 1;		//是否成功 0成功 1账号为空 2会话无效
+}
+
+//玩家别地登录
+message	SC_PlayerOtherLogin
+{
+	required string m_info = 1;		//设备信息
+}

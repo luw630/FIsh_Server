@@ -1,0 +1,5 @@
+t_id,t_step,t_placeType,t_radio,t_minScore,t_maxScore,t_coinPoint,t_totalGunPoints,t_totalFishPoints
+int32,int32,int32,int32,uint32,uint32,int32,uint32,uint32
+配置id,难度等级（最容易，容易，难，最难，死难）,"场地类型（小,中,大）","抽水比例(正数为抽水比例,负数为防水比例)",最小压分,最大压分,投币比例（1到10000）,总发炮分数初值,总击中鱼得分初值
+1,0,0,5,1,1000,1,0,0
+2,1,0,5,10,1000000,1,0,0

@@ -1,0 +1,64 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+//银行
+enum emPacket_Bank {
+	em_CS_BankSetPwd			= 0x240;	//设置银行密码
+	em_SC_BankSetPwdRst			= 0x241;	//设置银行密码
+	
+	em_CS_BankChangePwd			= 0x242;	//修改银行密码
+	em_SC_BankChangePwdRst		= 0x243;	//修改银行密码
+		
+	em_CS_BankStoreMoney		= 0x244;		//存钱
+	em_SC_BankStoreMoneyRst		= 0x245;		//存钱结果
+	
+	em_CS_BankDrawMoney			= 0x246;		//取钱
+	em_SC_BankDrawMoneyRst		= 0x247;		//取钱结果	
+}
+
+
+//设置银行密码
+message CS_BankSetPwd{
+	required string m_pwd = 1;				//
+}
+
+//设置银行密码
+message SC_BankSetPwdRst{
+	required int32 m_rst = 1;				//0成功
+}
+
+//修改银行密码
+message CS_BankChangePwd{
+	required string m_oldpwd = 1;			//旧密码
+	required string m_pwd = 2;				//新密码
+}
+
+//修改银行密码
+message SC_BankChangePwdRst{
+	required int32 m_rst = 1;				//0成功
+}
+
+//存钱
+message CS_BankStoreMoney{
+	required int32 m_money = 1;				//
+}
+
+//存钱结果
+message SC_BankStoreMoneyRst{
+	required int32 m_rst = 1;				//0成功
+	optional int32 m_money = 2;
+	optional int32 m_bankmoney = 3;
+}
+
+//取钱
+message CS_BankDrawMoney{
+	required int32 m_money = 1;				//
+}
+
+//取钱结果
+message SC_BankDrawMoneyRst{
+	required int32 m_rst = 1;				//0成功
+	optional int32 m_money = 2;
+	optional int32 m_bankmoney = 3;
+}

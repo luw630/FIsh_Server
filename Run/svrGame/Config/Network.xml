@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<ProxyConnector Id="1" IP="127.0.0.1" Port="19000" VerificationCode="123456" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492"/>
+	<!-- 监听网关 -->
+	<GateWayListener Id="1" Port="21000" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100">
+		<Listener NetType="1" IP="127.0.0.1" />
+	</GateWayListener>
+	<AccountListener Id="1" Port="22000" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100">
+		<Listener NetType="1" IP="127.0.0.1" />
+	</AccountListener>
+</Sessions>

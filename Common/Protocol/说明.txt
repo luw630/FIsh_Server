@@ -1,0 +1,7 @@
+fileName		start		说明
+Packet_DB		0x0000			
+Packet_Login		0x0100		登录模块
+Packet_Lobby		0x0200		大厅
+Packet_Fish		0x0300		钓鱼游戏				
+	
+	

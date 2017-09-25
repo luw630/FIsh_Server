@@ -1,0 +1,8 @@
+; cryptdll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "dllFish"
+DESCRIPTION  'dllFish Windows Dynamic Link Library'
+
+EXPORTS
+
+CreateGame		@1 		

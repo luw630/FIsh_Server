@@ -1,0 +1,31 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+enum emPacket_DbLog {
+	em_Log_Begin						= 0x100;	
+	em_Log_PlayerLogin					= 0x101;//玩家登陆
+	em_Log_PlayerQuit					= 0x102;//玩家退出
+	em_Log_EnterFishGame				= 0x103;	//进入捕鱼游戏
+	em_Log_LeaveFishGame				= 0x104;	//离开捕鱼游戏
+	em_Log_EnterEnterTable				= 0x105;	//进入座子
+	em_Log_EnterLeaveTable				= 0x106;	//离开座子	
+	em_Log_BattleSendBullet				= 0x107;	//发射子弹
+	em_Log_BattleKillFish				= 0x108;	//杀死鱼		
+	em_Log_end				= 0x1ff;
+}
+
+message Log_PlayerLogin
+{
+    required uint32 playerid = 1;	//玩家id
+	required string account = 2;	//账号id
+	required uint64 time = 3;		//时间
+	required string loginip = 4;	//登陆ip
+}
+
+message Log_PlayerQuit
+{
+    required uint32 playerid = 1;	//玩家id
+	required uint64 time = 2;		//时间
+}
+

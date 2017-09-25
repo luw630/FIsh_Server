@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<SessionGateway Id="1" IP="192.168.1.109" Port="25550" MaxConnections="2000" SendBufferSize="4096" RecvBufferSize="4096" MTU="1492" MaxQueues="100"/>	
+</Sessions>

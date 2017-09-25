@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e1b5af11-07d1-4377-bd6d-4b16bc459891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{5218f712-d143-4b20-bf7d-1c9d35f5602d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{49536337-4100-4866-ad87-a6261d2930b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionGateway">
+      <UniqueIdentifier>{d96a45cd-5e73-4fd1-aaf4-09abc1fbe3fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_DB.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_ErrCode.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Fish.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Server.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="App\App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Friend.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionGateway\SessionGateway.cpp">
+      <Filter>SessionGateway</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_DB.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_ErrCode.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Fish.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Server.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="App\App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Friend.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="App\ConnectMgr.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionGateway\SessionGateway.h">
+      <Filter>SessionGateway</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

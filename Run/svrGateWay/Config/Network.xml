@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sessions>
+	<!-- client -->
+	<ClientListener Id="1" Port="24000" MaxConnections="2000" SendBufferSize="1048576" RecvBufferSize="1048576" MTU="1492" MaxQueues="100">
+		<Listener NetType="1" IP="192.168.1.109" />
+	</ClientListener>
+	<GameConnector Id="1" IP="127.0.0.1" Port="21000" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100"/>
+	<AccountConnector Id="1" IP="127.0.0.1" Port="23000" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100"/>
+	<MemoryDbConnector Id="1" IP="127.0.0.1" Port="25500" MaxConnections="2000" SendBufferSize="10485760" RecvBufferSize="10485760" MTU="1492" MaxQueues="100"/>
+</Sessions>

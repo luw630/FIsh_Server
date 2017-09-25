@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e1b5af11-07d1-4377-bd6d-4b16bc459891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{10d4282a-6f82-47d4-9fc7-4c7b21af3ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionGateWay">
+      <UniqueIdentifier>{026c23f9-8362-4333-84f5-a8453ccd69f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{53747130-5275-4491-b37f-f7bbfd7a9c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Config">
+      <UniqueIdentifier>{e627bb45-541b-42d8-97f8-b9e672c254f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionProxy">
+      <UniqueIdentifier>{cc9cd3fa-4828-4dd3-9152-ef46bdeb9e3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Packets\Packet_Base.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_DB.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_ErrCode.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Fish.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Lobby.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Login.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Packets\Packet_Server.pb.cc">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionGateWay\SessionGateWay.cpp">
+      <Filter>SessionGateWay</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionGateWay\ListenerGateWay.cpp">
+      <Filter>SessionGateWay</Filter>
+    </ClCompile>
+    <ClCompile Include="App\App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Config\WfLoadCfg.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionProxy\SessionProxy.cpp">
+      <Filter>SessionProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ISessionProxy.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Packets\Packet_Base.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_DB.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_ErrCode.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Fish.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Lobby.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Login.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Packets\Packet_Server.pb.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionGateWay\SessionGateWay.h">
+      <Filter>SessionGateWay</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionGateWay\ListenerGateWay.h">
+      <Filter>SessionGateWay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Dispatcher.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfSessionConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WfSessionType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="App\App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\Cfgt_jobBean.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\Cfgt_mapBean.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Config\WfLoadCfg.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionProxy\SessionProxy.h">
+      <Filter>SessionProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ISessionProxy.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

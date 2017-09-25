@@ -1,0 +1,102 @@
+syntax = "proto2";
+package rpc;
+import "Packet_Base.proto";
+
+enum emPacket_Lobby {
+	em_Lobby_Begin				= 0x200;	//大厅消息开始
+	em_CS_PlayerInfo			= 0x210;	//请求玩家信息
+	em_SC_PlayerInfo			= 0x211;	//玩家信息（ M_SC_LoginGateWayRst 后服务端主动推送的玩家数据）
+	em_CS_EnterGame				= 0x212;	//进入游戏
+	em_SC_EnterGameRst			= 0x213;	//进入游戏结果 
+	
+	em_CS_LeaveGame				= 0x214;	//离开游戏
+	em_SC_LeaveGameRst			= 0x215;	//离开游戏结果 
+	
+	//排行榜
+	em_CS_Rank					= 0x216;	//请求排行榜
+	em_SC_RankData				= 0x217;	//排行榜数据
+	
+	//公告
+	em_CS_Announcement			= 0x218;	//请求公告
+	em_SC_Announcement			= 0x219;	//公告数据
+	
+	///////////////////////////////////////////////////////
+	//好友 （0x220~0x23f）
+	
+	///////////////////////////////////////////////////////
+	//银行 （0x240~0x25f）
+	
+	///////////////////////////////////////////////////////
+	//邮件
+	em_CS_MailGetList			= 0x260;	//请求邮件列表
+	em_SC_MailList				= 0x261;	//邮件列表
+	em_CS_MailDelItem			= 0x262;	//删除邮件
+	
+	em_Lobby_End				= 0x2ff;	//大厅消息结束
+}
+
+message t_RankItem{
+	required int32 m_index = 1;			//名次
+	required int32 m_playerid = 2;		//玩家id
+	required string m_name = 3;			//名字
+	required uint64 m_money = 4;		//金币
+	required int32 m_headid = 5;		//头像id
+}
+
+message t_AnnouncementItem{
+	required int32 m_id = 1;			//id
+	required string m_title = 2;		//标题
+	required string m_content = 3;		//内容
+}
+
+message t_MailItem{
+	required int32 m_id = 1;
+	required string m_title = 2;		
+	required int32 m_time = 3;			
+	required string m_content = 4;			
+}
+
+//玩家信息
+message SC_PlayerInfo{
+	required int32 m_playerid = 1;		//玩家id
+	required string m_nickname = 2;		//玩家别名
+	required int32 m_sex = 3;			//性别（0未设置，1男，2女）
+	required int32 m_headid = 4;		//头像id 
+	required int64 m_money = 5;			//金币
+}
+
+//进入游戏
+message CS_EnterGame{
+	required int32 m_gameid = 1;		//游戏id
+}
+
+//进入游戏结果
+message SC_EnterGameRst{
+	required int32 m_rst = 1;			//结果
+	required int32 m_gameid = 2;		//游戏id
+}
+
+//请求排行榜
+message CS_Rank{
+	required int32 m_page = 1;			//请求页数（从0开始）
+	required int32 m_perPageNum = 2;	//每页数量
+}
+//排行榜数据
+message SC_RankData{
+	repeated t_RankItem m_data = 1;		
+}
+
+//公告数据
+message SC_Announcement{
+	repeated t_AnnouncementItem m_data = 1;		
+}
+
+//邮件列表
+message SC_MailList{
+	repeated t_MailItem m_data = 1;		
+}
+//删除邮件
+message CS_MailDelItem{
+	required int32 m_id = 1;	
+}
+
